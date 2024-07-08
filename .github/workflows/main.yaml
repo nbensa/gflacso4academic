@@ -1,0 +1,27 @@
+name: Build Release Package
+
+on:
+  push:
+    tags:
+      - "v[0-9]*"
+      - "v[0-9]*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Bundle Theme
+        uses: thedoctor0/zip-release@0.7.6
+        with:
+          type: "zip"
+          filename: "theme_gflacso4academic-${{ github.ref_name }}.zip"
+          path: "gflacso4academic"
+
+      - name: Upload Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "theme_gflacso4academic-${{ github.ref_name }}.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
