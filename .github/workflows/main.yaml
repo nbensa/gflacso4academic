@@ -12,13 +12,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+        with:
+          path: gflacso4academic
 
       - name: Bundle Theme
         uses: thedoctor0/zip-release@0.7.6
         with:
           type: "zip"
           filename: "theme_gflacso4academic-${{ github.ref_name }}.zip"
-          path: "gflacso4academic"
+          path: gflacso4academic
+          exclusions: "*.git*"
 
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
