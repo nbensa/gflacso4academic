@@ -1,4 +1,4 @@
-/*#region*/ // Color system
+/*#region*/// Color system
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -12,20 +12,19 @@ $gray-800: #343a40 !default;
 $gray-900: #090a0b !default;
 $black: #000 !default;
 
-$grays: () !default;
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900,
-  ),
-  $grays
+$grays: (
+    ) !default;
+$grays: map-merge(("100": $gray-100,
+            "200": $gray-200,
+            "300": $gray-300,
+            "400": $gray-400,
+            "500": $gray-500,
+            "600": $gray-600,
+            "700": $gray-700,
+            "800": $gray-800,
+            "900": $gray-900,
+        ),
+        $grays
 );
 
 $blue: #30569dd1 !default;
@@ -39,51 +38,49 @@ $green: #478040dd !default;
 $teal: #307991dd !default;
 $cyan: #4fadb0dd !default;
 
-$colors: () !default;
+$colors: (
+    ) !default;
 $colors: map-merge(
-  (
-    "blue": $blue,
-    "indigo": $indigo,
-    "purple": $purple,
-    "pink": $pink,
-    "red": $red,
-    "orange": $orange,
-    "yellow": $yellow,
-    "green": $green,
-    "teal": $teal,
-    "cyan": $cyan,
-    "white": $white,
-    "gray": $gray-500,
-    "gray-dark": $gray-800,
-  ),
-  $colors
+        (
+            "blue": $blue,
+            "indigo": $indigo,
+            "purple": $purple,
+            "pink": $pink,
+            "red": $red,
+            "orange": $orange,
+            "yellow": $yellow,
+            "green": $green,
+            "teal": $teal,
+            "cyan": $cyan,
+            "white": $white,
+            "gray": $gray-500,
+            "gray-dark": $gray-800,
+        ),
+        $colors
 );
 
-$primary: hsl(165, 33%, 38%) !default;
-$primary-1: hsl(165, 33%, 48%) !default;
-$primary-2: hsl(164, 33%, 68%) !default;
-$primary-3: hsl(165, 33%, 88%) !default;
-$primary-a: hsl(165, 53%, 38%) !default;
-$focus: hsl(165, 33%, 58%) !default;
-
-$base: hsl(165, 33%, 23%) !default;
-$base-a: hsla(165, 33%, 23%, 0.5) !default;
+$primary: hsl(215, 46%, 48%) !default;
+$primary-1: hsl(215, 46%, 58%) !default;
+$primary-2: hsl(215, 46%, 78%) !default;
+$primary-3: hsl(215, 46%, 88%) !default;
+$primary-a: hsl(215, 66%, 48%) !default;
+$focus: hsl(215, 46%, 68%) !default;
 
 $border-1: $primary-3 !default;
 
 $background-1: $primary-3 !default;
-$background-2: hsla(165, 32%, 83%, 0.4) !default;
+$background-2: hsla(215, 46%, 83%, 0.4) !default;
 $background-3: hsla(45, 100%, 38%, 0.3) !default;
 
-$secondary: hsl(293, 25%, 40%) !default;
-$secondary-a: hsla(293, 25%, 40%, 0.8) !default;
-$secondary-b: hsla(293, 25%, 40%, 0.65) !default;
-$secondary-1: hsl(294, 25%, 50%) !default;
-$secondary-2: hsl(293, 25%, 70%) !default;
-$secondary-3: hsl(300, 23%, 90%) !default;
+$secondary: hsl(348, 88%, 39%) !default;
+$secondary-a: hsla(348, 88%, 39%, 0.8) !default;
+$secondary-b: hsla(348, 88%, 39%, 0.65) !default;
+$secondary-1: hsl(348, 88%, 50%) !default;
+$secondary-2: hsl(348, 88%, 70%) !default;
+$secondary-3: hsl(348, 88%, 90%) !default;
 
-$color-links: hsl(294, 55%, 40%) !default;
-$notas: hsl(294, 55%, 40%) !default;
+$color-links: $secondary !default;
+$notas: $secondary !default;
 
 $success: #478040b3 !default;
 $info: #4fadb0b3 !default;
@@ -98,19 +95,21 @@ $flacso-2: hsl(216, 51%, 50%) !default;
 $flacso-3: hsl(216, 51%, 80%) !default;
 $flacso-4: hsla(216, 51%, 40%, 0.82) !default;
 
-$theme-colors: () !default;
-$theme-colors: map-merge(
-  (
-    "primary": $primary,
-    "secondary": $secondary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "dark": $dark,
-  ),
-  $theme-colors
+$base: $flacso !default;
+$base-a: hsla(216, 51%, 20%, 0.5) !default;
+
+$theme-colors: (
+    ) !default;
+$theme-colors: map-merge(("primary": $primary,
+            "secondary": $secondary,
+            "success": $success,
+            "info": $info,
+            "warning": $warning,
+            "danger": $danger,
+            "light": $light,
+            "dark": $dark,
+        ),
+        $theme-colors
 );
 
 $activity-icon-administration-bg: $teal !default;
@@ -120,20 +119,17 @@ $activity-icon-communication-bg: $yellow !default;
 $activity-icon-content-bg: $blue !default;
 $activity-icon-interface-bg: $indigo !default;
 
-$activity-icon-colors: () !default;
-$activity-icon-colors: map-merge(
-  (
-    "administration": $activity-icon-administration-bg,
-    "assessment": $activity-icon-assessment-bg,
-    "collaboration": $activity-icon-collaboration-bg,
-    "communication": $activity-icon-communication-bg,
-    "content": $activity-icon-content-bg,
-    "interface": $activity-icon-interface-bg,
-  ),
-  $activity-icon-colors
+$activity-icon-colors: (
+    ) !default;
+$activity-icon-colors: map-merge(("administration": $activity-icon-administration-bg,
+            "assessment": $activity-icon-assessment-bg,
+            "collaboration": $activity-icon-collaboration-bg,
+            "communication": $activity-icon-communication-bg,
+            "content": $activity-icon-content-bg,
+            "interface": $activity-icon-interface-bg,
+        ),
+        $activity-icon-colors
 );
-
-/*#endregion*/
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
@@ -147,8 +143,10 @@ $yiq-text-light: $white !default;
 
 $yiq-contrasted-threshold: 190 !default;
 
-/*#region*/ // Typography
-//
+/*#endregion*/
+
+/*#region*/// Typography
+
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
