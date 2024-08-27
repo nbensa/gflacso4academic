@@ -27,22 +27,20 @@ $grays: map-merge(("100": $gray-100,
         $grays
 );
 
-$blue: #30569dd1 !default;
-$indigo: #504080dd !default;
-$purple: #704080dd !default;
-$pink: #d86481dd !default;
-$red: #a02241dd !default;
-$orange: #b3380fdd !default;
-$yellow: #c29100dd !default;
-$green: #478040dd !default;
-$teal: #307991dd !default;
-$cyan: #4fadb0dd !default;
+$blue: #3678c9 !default;
+$indigo: #7136c9 !default;
+$purple: #c936a2 !default;
+$pink: #efc5c3 !default;
+$red: #c94736 !default;
+$orange: #c98036 !default;
+$yellow: #C9C636 !default;
+$green: #4EC936 !default;
+$teal: #258d6e !default;
+$cyan: #36c99d !default;
 
 $colors: (
     ) !default;
-$colors: map-merge(
-        (
-            "blue": $blue,
+$colors: map-merge(("blue": $blue,
             "indigo": $indigo,
             "purple": $purple,
             "pink": $pink,
@@ -59,44 +57,51 @@ $colors: map-merge(
         $colors
 );
 
-$primary: hsl(215, 46%, 48%) !default;
-$primary-1: hsl(215, 46%, 58%) !default;
-$primary-2: hsl(215, 46%, 78%) !default;
-$primary-3: hsl(215, 46%, 88%) !default;
-$primary-a: hsl(215, 66%, 48%) !default;
-$focus: hsl(215, 46%, 68%) !default;
+$primary: hsl(213, 58%, 50%) !default;
+
+// Derivados del color primario
+$primary-1: lighten($primary, 10%) !default; // Color primario más claro
+$primary-2: lighten($primary, 25%) !default; // Color primario aún más claro
+$primary-3: lighten($primary, 40%) !default; // Color primario muy claro
+$primary-a: saturate($primary, 20%) !default; // Color primario más saturado
+$primary-b: rgba($primary, 0.8) !default; // Color primario con opacidad
+$focus: lighten($primary, 20%) !default; // Color de enfoque
 
 $border-1: $primary-3 !default;
 
 $background-1: $primary-3 !default;
-$background-2: hsla(215, 46%, 83%, 0.4) !default;
+$background-2: rgba($primary-3, 0.4) !default; // Color de fondo secundario con opacidad
 $background-3: hsla(45, 100%, 38%, 0.3) !default;
 
-$secondary: hsl(348, 88%, 39%) !default;
-$secondary-a: hsla(348, 88%, 39%, 0.8) !default;
-$secondary-b: hsla(348, 88%, 39%, 0.65) !default;
-$secondary-1: hsl(348, 88%, 50%) !default;
-$secondary-2: hsl(348, 88%, 70%) !default;
-$secondary-3: hsl(348, 88%, 90%) !default;
+$secondary: hsl(333, 58%, 50%) !default;
+
+// Derivados del color secundario
+$secondary-a: rgba($secondary, 0.8) !default; // Color secundario con opacidad
+$secondary-b: rgba($secondary, 0.65) !default; // Color secundario con opacidad reducida
+$secondary-1: lighten($secondary, 10%) !default; // Color secundario más claro
+$secondary-2: lighten($secondary, 25%) !default; // Color secundario aún más claro
+$secondary-3: lighten($secondary, 40%) !default; // Color secundario muy claro
 
 $color-links: $secondary !default;
 $notas: $secondary !default;
 
-$success: #478040b3 !default;
-$info: #4fadb0b3 !default;
-$warning: #c29100b3 !default;
-$danger: #a02241b3 !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
+$flacso: hsl(213, 58%, 19%) !default;
 
-$flacso: hsl(216, 51%, 20%) !default;
-$flacso-1: hsl(216, 51%, 30%) !default;
-$flacso-2: hsl(216, 51%, 50%) !default;
-$flacso-3: hsl(216, 51%, 80%) !default;
-$flacso-4: hsla(216, 51%, 40%, 0.82) !default;
+// Derivados del color flacso
+$flacso-1: lighten($flacso, 10%) !default; // Color flacso más claro
+$flacso-2: lighten($flacso, 30%) !default; // Color flacso más claro
+$flacso-3: lighten($flacso, 60%) !default; // Color flacso muy claro
+$flacso-4: rgba($flacso, 0.82) !default; // Color flacso con opacidad
 
 $base: $flacso !default;
-$base-a: hsla(216, 51%, 20%, 0.5) !default;
+$base-a: rgba($flacso, 0.5) !default; // Color flacso con opacidad
+
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
 
 $theme-colors: (
     ) !default;
