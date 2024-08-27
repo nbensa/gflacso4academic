@@ -24,7 +24,7 @@ jobs:
           exclusions: "*.git*"
 
       - name: Upload Release
-        uses: ncipollo/release-action@v1.12.0
+        uses: ncipollo/release-action@v1.14.0
         with:
           artifacts: "theme_gflacso4academic-${{ github.ref_name }}.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
