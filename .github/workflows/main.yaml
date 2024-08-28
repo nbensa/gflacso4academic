@@ -1,6 +1,10 @@
 name: Build Release Package
 
 on:
+  workflow_dispatch:
+    tags:
+      required: false
+      type: boolean
   push:
     tags:
       - "v[0-9]*"
